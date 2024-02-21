@@ -14,11 +14,11 @@ function renderProducts(prods: Product[]): void {
 }
 
 function getByCategory(category: string): void {
-    // your code
-    const categoryProducts = products.filter((a) => a.category = category)
+    //the to uppercase serves the purpose of just removing capitals versus lower case from the equation
+    const categoryProducts = products.filter((a) => a.category.toUpperCase() === category.toUpperCase()); 
     for(const product of categoryProducts){
         generateProductHTML(product);
-        console.log("Generated " + product.name); // debug info
+        console.log("Generated " + product.name); //debug info
     }
 }
 
