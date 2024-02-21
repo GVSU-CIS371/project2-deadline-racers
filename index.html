@@ -35,7 +35,19 @@
         // - "Clothing" should display all products categorized as "Clothing."
         // - "Groceries" should display all products categorized as "Groceries."
         // - "Best Seller" should display all products with a rating greater than 4.5.
-
+        document.getElementById("electronics").addEventListener("click",function(){
+          getByCategory("electronics");
+        });
+        document.getElementById("clothing").addEventListener("click",function(){
+          getByCategory("clothing");
+        });
+        document.getElementById("groceries").addEventListener("click",function(){
+          getByCategory("groceries");
+        });
+        // document.getElementById("bestSeller").addEventListener("click",function(){
+        //   getByRating(4.5);
+        // });
+        
         
         // your code
       </script>

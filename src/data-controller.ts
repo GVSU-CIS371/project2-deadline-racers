@@ -15,6 +15,11 @@ function renderProducts(prods: Product[]): void {
 
 function getByCategory(category: string): void {
     // your code
+    const categoryProducts = products.filter((a) => a.category = category)
+    for(const product of categoryProducts){
+        generateProductHTML(product);
+        console.log("Generated " + product.name); // debug info
+    }
 }
 
 function getByRating(minRating: number): void {
