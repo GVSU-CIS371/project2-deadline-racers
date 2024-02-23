@@ -10,9 +10,8 @@ function generateProductHTML(product: Product): string {
 }
 
 function renderProducts(prods: Product[]): void {
-    
-    const productsContainer = document.getElementById('main-container')
 
+    const productsContainer = document.getElementById('main-container')
     const productDivs = prods.map((prod) => generateProductHTML(prod)).join('')
     
     if (productsContainer) {
@@ -23,10 +22,13 @@ function renderProducts(prods: Product[]): void {
 function getByCategory(category: string): void {
     //the to uppercase serves the purpose of just removing capitals versus lower case from the equation
     const categoryProducts = products.filter((a) => a.category.toUpperCase() === category.toUpperCase()); 
+    const prods: Product[] = []
+
     for(const product of categoryProducts){
-        generateProductHTML(product);
-        console.log("Generated " + product.name); //debug info
+        prods.push(product)
     }
+    
+    renderProducts(prods)
 }
 
 function getByRating(minRating: number): void {
