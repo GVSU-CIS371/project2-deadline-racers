@@ -33,6 +33,8 @@ function getByCategory(category: string): void {
 
 function getByRating(minRating: number): void {
     // your code
+    const highRatedProducts = products.filter((product) => product.rating > minRating);
+        renderProducts(highRatedProducts);
 }
 
 export { renderProducts, getByCategory, getByRating };
